@@ -1,7 +1,7 @@
 
 
 <?php
-/* Template Name: About */
+/* Template Name: Kontakt */
 
 
 get_header();

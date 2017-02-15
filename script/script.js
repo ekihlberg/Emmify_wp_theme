@@ -1,6 +1,7 @@
 window.addEventListener("load", function(){
 	var load_screen = document.getElementById("load_screen");
 	document.body.removeChild(load_screen);
+
 });
 
 console.log('%c HEJ Webbutvecklare, GILLAR DU VAD DU SER? skicka ett mail på info@ekihlberg.se ', 'background: #333; color: #efefef ; font-size: 20px; font-weight:bold');
@@ -11,24 +12,44 @@ jQuery('.navTrigger').click(function(){
 });
 var status;
 
-jQuery('#arrow').click(function(){
- sessionStorage.setItem("status","upp");
-console.log(sessionStorage.status);
-status = sessionStorage.status;
-console.log(status);
-	});
+if (sessionStorage.status =='hide1') {
+	jQuery('.toppart').addClass(sessionStorage.status);
+}
 
 jQuery('#arrow').click(function(){
-
-	if(jQuery("#arrow").hasClass("fa-angle-up")){
-		jQuery("#arrow").attr('class', 'fa fa-angle-down');
-	}else{
-	jQuery("#arrow").attr('class', 'fa fa-angle-up');
+  // console.log(sessionStorage.status);
+	if (sessionStorage.status == undefined){
+		sessionStorage.setItem("status","hide1");
+	 	console.log(sessionStorage.status);
+	 	jQuery('.toppart').addClass(sessionStorage.status);
+	}
+	else if (sessionStorage.status =='hide1') {
+		sessionStorage.clear();
+		jQuery('.toppart').removeClass('hide1');
 	}
 
 
 
-	jQuery('.toppart').toggleClass('hide1');
+
+if(jQuery("#arrow").hasClass("fa-angle-up")){
+ jQuery("#arrow").attr('class', 'fa fa-angle-down');
+ }else{
+ jQuery("#arrow").attr('class', 'fa fa-angle-up');
+ }
+
+	});
+
+jQuery('#arrow').click(function(){
+
+
+
+
+	//
+	//
+	//
+	// jQuery('.toppart').toggleClass('hide1');
+
+
 	window.scrollTo(0,0);
 
 });

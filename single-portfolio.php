@@ -44,6 +44,12 @@ if (has_term('centercontent', 'posttype')):
 <h2 class="heading-single"><?php the_title(); ?></h2>
 
     <div class="text">  <?php the_content();?></div>
+    <?php if (has_term('button', 'posttype')):
+    ?>
+
+    <a class="cta-knapp" target="_blank"href="<?php echo knapp_box_get_meta( 'knapp_box_url' ); ?>"><?php echo knapp_box_get_meta( 'knapp_box_text_p_knapp'); ?></a>
+
+    <?php  endif;?>
 <?php  endif;?>
 
 
@@ -96,7 +102,15 @@ if (has_term('contentbox', 'posttype')):
         </div>
 
         <?php   }; ?>
+        <div class="pagination-row">
+          <span class="previous"><?php previous_post_link(); ?></span>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>#portfolio">
+          <img class="seall"src="http://ekihlberg.se/wp-content/uploads/2016/12/52818.png" alt=""></a>
+          <span class="next"><?php next_post_link(); ?></span>
+      
+        </div>
     </div>
+
 
 
   </section>

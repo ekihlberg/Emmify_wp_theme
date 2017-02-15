@@ -17,7 +17,7 @@
   </div>
   <i class="fa fa-angle-down" id="arrow" aria-hidden="true"></i>
   </div>
-    <h2 class="heading">Mina Godbitar</h1>
+    <h2 class="heading" id="portfolio">Mina Godbitar</h1>
   <div class="grid">
 
 <?php
@@ -26,7 +26,7 @@
 
     if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-    <section class="port">
+    <section class="port" id="port">
       <?php
 
 

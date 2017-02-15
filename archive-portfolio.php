@@ -12,7 +12,7 @@
 
     <section class="port">
       <?php if ( has_post_thumbnail() ):?>
-        <a class="portfolio-image" href="<?php the_permalink() ?>"><div class="post-image" style="background-image:url('<?php the_post_thumbnail_url( 'full' );?>');">
+        <a class="portfolio-image" href="<?php the_permalink() ?>"><div class="post-image" style="background-image:url('<?php bloginfo('stylesheet_directory'); ?>/includes/spelningar.png');">
           <div class="overlay">
             <h3>  <?php the_title();?></h3>
             <p>
@@ -37,7 +37,11 @@
       <?php else: ?>
         <a class="portfolio-image" href="<?php the_permalink() ?>"><div class="post-image" style="background-image:url('<?php bloginfo('stylesheet_directory'); ?>/img/foil.jpg');"></div></a>
       <?php endif; ?>
+
+
+
     </section>
+
 
 
 
